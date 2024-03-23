@@ -3,6 +3,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { Customer } from '../models/Customer';
 import { HttpServiceService } from '../http-service.service';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-customers',
@@ -10,6 +11,13 @@ import { HttpServiceService } from '../http-service.service';
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent implements AfterViewInit , OnInit{
+
+  borrar(id:string) {
+  this.http.delete(id).subscribe(response =>{console.log(response);
+  this.get()},
+  (error)=>{console.log(error.error)}
+  )
+}
 
   customers!:Customer[]
   dataSource = new MatTableDataSource<Customer>(this.customers);
