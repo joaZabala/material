@@ -9,7 +9,7 @@ import { CustomersComponent } from './customers/customers.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
-
+import {MatFormFieldModule} from '@angular/material/form-field'
 //http
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatPaginatorModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
