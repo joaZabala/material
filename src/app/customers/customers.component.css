@@ -1,0 +1,15 @@
+table {
+    width: 50%;
+  }
+  
+  .mat-elevation-z8{
+    margin: 100px;
+ }
+
+ .icon-container{
+  white-space:nowrap;
+ }
+ .icons{
+  display: inline-block; /* Muestra los iconos en línea */
+  margin-right: 8px; /* Espacio entre iconos */
+ }
